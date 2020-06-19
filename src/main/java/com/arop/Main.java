@@ -2,11 +2,10 @@ package com.arop;
 
 public class Main {
     public static void main(String[] args) {
-        byte b = 1;
-        short sh = 2;
-        long l = 3;
-        double d = 4.0;
-        float f = 0.5f;
+        calculate((byte) 1, (short) 2, 3, 4.0, 0.5f);
+    }
+
+    public static void calculate(byte b, short sh, long l, double d, float f) {
         System.out.println(b + sh);
         System.out.println(d - f);
         System.out.println(l * b);
