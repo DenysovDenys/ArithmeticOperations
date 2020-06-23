@@ -23,8 +23,8 @@ public class Arry {
                 }
             }
         }
-        for (int i = 0; i < duplicateArray.length; i++)
-            System.out.print(duplicateArray[i]);
+        for (int array : duplicateArray)
+            System.out.print(array);
     }
 
     public static void getArrayDiagonal(){
@@ -41,9 +41,8 @@ public class Arry {
 
     public static void setSum(){
         long sum = 0;
-        for (int i = 0; i < randomArray.length; i++){
-            sum += randomArray[i];
-        }
+        for (int array : randomArray)
+            sum += array;
         System.out.println("Summ = " + sum);
     }
 
@@ -81,19 +80,17 @@ public class Arry {
 
     public static void getMax(){
         int max = 0;
-        for (int i = 0; i < randomArray.length; i++){
-            if (max< randomArray[i])
-                max = randomArray[i];
-        }
+        for (int array : randomArray)
+            if (max < array)
+                max = array;
         System.out.println("Max value of mass = " + max);
     }
 
     public static void getMin(){
         int min = randomArray[0];
-        for (int i = 0; i < randomArray.length; i++){
-            if (min> randomArray[i])
-                min = randomArray[i];
-        }
+        for (int array : randomArray)
+            if (min > array)
+                min = array;
         System.out.println("Min value of mass = " + min);
     }
 
