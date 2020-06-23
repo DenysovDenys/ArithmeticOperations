@@ -7,7 +7,7 @@ public class Arry {
     public static String[][] stringArray = { {"orange ","apricot ", "coconut "}, {"pineapple ", "banana ", "grapefruit "}, {"mandarin ", "rambutan ", "pear "} };
     public static int[] duplicateArray = {3, 2, 3, 1, 4, 2, 8, 3};
 
-    public static void replaceDuplicate(){
+    public static void getReplacedDuplicate(){
         for (int i = duplicateArray.length-1; i > 0; i--) {
             StringBuffer result = new StringBuffer();
             result.append(duplicateArray[i]);
@@ -27,19 +27,19 @@ public class Arry {
             System.out.print(duplicateArray[i]);
     }
 
-    public static void massDiagonal(){
+    public static void getArrayDiagonal(){
         for (int i = 0; i < stringArray.length; i++)
             System.out.print(stringArray[i][i]);
     }
 
-    public static void massReplaced(){
+    public static void getReplacedArray(){
         for (int i = 0; i < randomArray.length; i++){
             randomArray[i] = randomArray[i] * randomArray[i];
             System.out.print(randomArray[i] + " ");
         }
     }
 
-    public static void sum(){
+    public static void setSum(){
         long sum = 0;
         for (int i = 0; i < randomArray.length; i++){
             sum += randomArray[i];
@@ -47,7 +47,7 @@ public class Arry {
         System.out.println("Summ = " + sum);
     }
 
-    public static void sortBySelectionIncrease(){
+    public static void setSortBySelectionIncrease(){
         int lng = randomArray.length;
         for (int i = 0; i < lng; i++)
         {
@@ -63,7 +63,7 @@ public class Arry {
         }
     }
 
-    public static void sortBySelectionDecrease(){
+    public static void setSortBySelectionDecrease(){
         int lng = randomArray.length;
         for (int i = 0; i < lng; i++)
         {
@@ -79,7 +79,7 @@ public class Arry {
         }
     }
 
-    public static void findMax(){
+    public static void getMax(){
         int max = 0;
         for (int i = 0; i < randomArray.length; i++){
             if (max< randomArray[i])
@@ -88,7 +88,7 @@ public class Arry {
         System.out.println("Max value of mass = " + max);
     }
 
-    public static void findMin(){
+    public static void getMin(){
         int min = randomArray[0];
         for (int i = 0; i < randomArray.length; i++){
             if (min> randomArray[i])
@@ -97,7 +97,7 @@ public class Arry {
         System.out.println("Min value of mass = " + min);
     }
 
-    public static void fillMass(){
+    public static void setRandomArray(){
         for (int i = 0; i < randomArray.length; i++)
             randomArray[i] = new Random().nextInt(10001);
     }

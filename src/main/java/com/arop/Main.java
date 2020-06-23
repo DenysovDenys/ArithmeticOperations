@@ -1,30 +1,27 @@
 package com.arop;
 
-import arithmeticOperations.Arithmetic;
 import arrayOperations.Arry;
-
-import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        Arry.fillMass();
-        Arry.findMin();
-        Arry.findMax();
+        Arry.setRandomArray();
+        Arry.getMin();
+        Arry.getMax();
         System.out.print("Mass increased: ");
-        Arry.sortBySelectionIncrease();
+        Arry.setSortBySelectionIncrease();
         System.out.println();
         System.out.print("Mass decreased: ");
-        Arry.sortBySelectionDecrease();
+        Arry.setSortBySelectionDecrease();
         System.out.println();
-        Arry.sum();
+        Arry.setSum();
         System.out.print("Replaced mass = ");
-        Arry.massReplaced();
+        Arry.getReplacedArray();
         System.out.println();
         System.out.print("Diagonal of mass = ");
-        Arry.massDiagonal();
+        Arry.getArrayDiagonal();
         System.out.println();
         System.out.print("Replaced Duplicate = ");
-        Arry.replaceDuplicate();
+        Arry.getReplacedDuplicate();
     }
 
 }
