@@ -94,6 +94,6 @@ public class Arry {
 
     public static void setRandomArray() {
         for (int i = 0; i < randomArray.length; i++)
-            randomArray[i] = new Random().nextInt(10001);
+            randomArray[i] = new Random().nextInt(101);
     }
 }
