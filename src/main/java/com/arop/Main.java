@@ -4,9 +4,9 @@ import java.util.Random;
 
 public class Main {
 
-    public static int[] massOfRandom = new int[20];
-    public static String[][] massOfString = { {"orange ","apricot ", "coconut "}, {"pineapple ", "banana ", "grapefruit "}, {"mandarin ", "rambutan ", "pear "} };
-    public static int[] massDuplicate = {3, 2, 3, 1, 4, 2, 8, 3};
+    public static int[] randomArray = new int[20];
+    public static String[][] stringArray = { {"orange ","apricot ", "coconut "}, {"pineapple ", "banana ", "grapefruit "}, {"mandarin ", "rambutan ", "pear "} };
+    public static int[] duplicateArray = {3, 2, 3, 1, 4, 2, 8, 3};
 
     public static void main(String[] args) {
         //HW1
@@ -40,98 +40,98 @@ public class Main {
     }
 
     public static void replaceDuplicate(){
-        for (int i = massDuplicate.length-1; i > 0; i--) {
+        for (int i = duplicateArray.length-1; i > 0; i--) {
             StringBuffer result = new StringBuffer();
-            result.append(massDuplicate[i]);
+            result.append(duplicateArray[i]);
             String res = result.toString();
-            for (int j = 0; j < massDuplicate.length; j++) {
+            for (int j = 0; j < duplicateArray.length; j++) {
                 StringBuffer esult = new StringBuffer();
-                esult.append(massDuplicate[j]);
+                esult.append(duplicateArray[j]);
                 String re = esult.toString();
                 if (i != j) {
                     if (res.equals(re)) {
-                        massDuplicate[i] = 0;
+                        duplicateArray[i] = 0;
                     }
                 }
             }
         }
-        for (int i = 0; i < massDuplicate.length; i++)
-            System.out.print(massDuplicate[i]);
+        for (int i = 0; i < duplicateArray.length; i++)
+            System.out.print(duplicateArray[i]);
     }
 
     public static void massDiagonal(){
-        for (int i = 0; i < massOfString.length; i++)
-            System.out.print(massOfString[i][i]);
+        for (int i = 0; i < stringArray.length; i++)
+            System.out.print(stringArray[i][i]);
     }
 
     public static void massReplaced(){
-        for (int i = 0; i < massOfRandom.length; i++){
-            massOfRandom[i] = massOfRandom[i] * massOfRandom[i];
-            System.out.print(massOfRandom[i] + " ");
+        for (int i = 0; i < randomArray.length; i++){
+            randomArray[i] = randomArray[i] * randomArray[i];
+            System.out.print(randomArray[i] + " ");
         }
     }
 
     public static void sum(){
         long sum = 0;
-        for (int i = 0; i < massOfRandom.length; i++){
-            sum += massOfRandom[i];
+        for (int i = 0; i < randomArray.length; i++){
+            sum += randomArray[i];
         }
         System.out.println("Summ = " + sum);
     }
 
     public static void sortBySelectionIncrease(){
-        int n = massOfRandom.length;
-        for (int i = 0; i < n; i++)
+        int lng = randomArray.length;
+        for (int i = 0; i < lng; i++)
         {
             int minIdx = i;
-            for (int j = i + 1; j < n; j++)
-                if (massOfRandom[j] < massOfRandom[minIdx])
+            for (int j = i + 1; j < lng; j++)
+                if (randomArray[j] < randomArray[minIdx])
                     minIdx = j;
 
-            int temp = massOfRandom[minIdx];
-            massOfRandom[minIdx] = massOfRandom[i];
-            massOfRandom[i] = temp;
-            System.out.print(massOfRandom[i] + " ");
+            int temp = randomArray[minIdx];
+            randomArray[minIdx] = randomArray[i];
+            randomArray[i] = temp;
+            System.out.print(randomArray[i] + " ");
         }
     }
 
     public static void sortBySelectionDecrease(){
-        int n = massOfRandom.length;
-        for (int i = 0; i < n; i++)
+        int lng = randomArray.length;
+        for (int i = 0; i < lng; i++)
         {
             int maxIdx = i;
-            for (int j = i + 1; j < n; j++)
-                if (massOfRandom[j] > massOfRandom[maxIdx])
+            for (int j = i + 1; j < lng; j++)
+                if (randomArray[j] > randomArray[maxIdx])
                     maxIdx = j;
 
-            int temp = massOfRandom[maxIdx];
-            massOfRandom[maxIdx] = massOfRandom[i];
-            massOfRandom[i] = temp;
-            System.out.print(massOfRandom[i] + " ");
+            int temp = randomArray[maxIdx];
+            randomArray[maxIdx] = randomArray[i];
+            randomArray[i] = temp;
+            System.out.print(randomArray[i] + " ");
         }
     }
 
     public static void findMax(){
         int max = 0;
-        for (int i = 0; i < massOfRandom.length; i++){
-            if (max<massOfRandom[i])
-                max = massOfRandom[i];
+        for (int i = 0; i < randomArray.length; i++){
+            if (max< randomArray[i])
+                max = randomArray[i];
         }
         System.out.println("Max value of mass = " + max);
     }
 
     public static void findMin(){
-        int min = massOfRandom[0];
-        for (int i = 0; i < massOfRandom.length; i++){
-            if (min>massOfRandom[i])
-                min = massOfRandom[i];
+        int min = randomArray[0];
+        for (int i = 0; i < randomArray.length; i++){
+            if (min> randomArray[i])
+                min = randomArray[i];
         }
         System.out.println("Min value of mass = " + min);
     }
 
     public static void fillMass(){
-        for (int i = 0; i < massOfRandom.length; i++)
-            massOfRandom[i] = new Random().nextInt(10001);
+        for (int i = 0; i < randomArray.length; i++)
+            randomArray[i] = new Random().nextInt(10001);
     }
 
     public static void calculate(byte b, short sh, long l, double d, float f) {
