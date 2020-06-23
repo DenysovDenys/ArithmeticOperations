@@ -1,5 +1,6 @@
 package com.arop;
 
+import arithmeticOperations.Arithmetic;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
@@ -13,7 +14,7 @@ class MainTest {
     @Test
     public void testCalculate() {
         System.setOut(new PrintStream(outContent));
-        Main.calculate((byte) 3, (short) 5, 7, 8.0, 0.7f);
+        Arithmetic.calculate((byte) 3, (short) 5, 7, 8.0, 0.7f);
         String[] str = outContent.toString().split("\n");
         assertEquals("8", str[0]);
         assertEquals("7.300000011920929", str[1]);
