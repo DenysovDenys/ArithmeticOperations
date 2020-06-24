@@ -13,7 +13,8 @@ class ArithmeticTest {
     @Test
     public void testCalculate() {
         System.setOut(new PrintStream(outContent));
-        Arithmetic.getCalculate((byte) 3, (short) 5, 7, 8.0, 0.7f);
+        Arithmetic arithmetic = new Arithmetic();
+        arithmetic.outCalculate((byte) 3, (short) 5, 7, 8.0, 0.7f);
         String[] str = outContent.toString().split("\n");
         assertEquals("8", str[0]);
         assertEquals("7.300000011920929", str[1]);

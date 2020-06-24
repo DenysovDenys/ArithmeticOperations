@@ -3,11 +3,7 @@ package arrayOperations;
 import java.util.Random;
 
 public class Arry {
-    public static int[] randomArray = new int[20];
-    public static String[][] stringArray = {{"orange ", "apricot ", "coconut "}, {"pineapple ", "banana ", "grapefruit "}, {"mandarin ", "rambutan ", "pear "}};
-    public static int[] duplicateArray = {3, 2, 3, 1, 4, 2, 8, 3};
-
-    public static void getReplacedDuplicate() {
+    public static void outReplacedDuplicate(int[] duplicateArray) {
         for (int i = duplicateArray.length - 1; i > 0; i--) {
             StringBuffer result = new StringBuffer();
             result.append(duplicateArray[i]);
@@ -23,37 +19,41 @@ public class Arry {
                 }
             }
         }
-        for (int array : duplicateArray)
+        for (int array : duplicateArray) {
             System.out.print(array);
+        }
     }
 
-    public static void getArrayDiagonal() {
-        for (int i = 0; i < stringArray.length; i++)
+    public static void outArrayDiagonal(String[][] stringArray) {
+        for (int i = 0; i < stringArray.length; i++) {
             System.out.print(stringArray[i][i]);
+        }
     }
 
-    public static void getReplacedArray() {
+    public static void outReplacedArray(int[] randomArray) {
         for (int i = 0; i < randomArray.length; i++) {
             randomArray[i] = randomArray[i] * randomArray[i];
             System.out.print(randomArray[i] + " ");
         }
     }
 
-    public static void setSum() {
+    public static void outSum(int[] randomArray) {
         long sum = 0;
-        for (int array : randomArray)
+        for (int array : randomArray) {
             sum += array;
+        }
         System.out.println("Summ = " + sum);
     }
 
-    public static void setSortBySelectionIncrease() {
+    public static void outSortBySelectionIncrease(int[] randomArray) {
         int lng = randomArray.length;
         for (int i = 0; i < lng; i++) {
             int minIdx = i;
-            for (int j = i + 1; j < lng; j++)
-                if (randomArray[j] < randomArray[minIdx])
+            for (int j = i + 1; j < lng; j++) {
+                if (randomArray[j] < randomArray[minIdx]) {
                     minIdx = j;
-
+                }
+            }
             int temp = randomArray[minIdx];
             randomArray[minIdx] = randomArray[i];
             randomArray[i] = temp;
@@ -61,14 +61,15 @@ public class Arry {
         }
     }
 
-    public static void setSortBySelectionDecrease() {
+    public static void outSortBySelectionDecrease(int[] randomArray) {
         int lng = randomArray.length;
         for (int i = 0; i < lng; i++) {
             int maxIdx = i;
-            for (int j = i + 1; j < lng; j++)
-                if (randomArray[j] > randomArray[maxIdx])
+            for (int j = i + 1; j < lng; j++) {
+                if (randomArray[j] > randomArray[maxIdx]) {
                     maxIdx = j;
-
+                }
+            }
             int temp = randomArray[maxIdx];
             randomArray[maxIdx] = randomArray[i];
             randomArray[i] = temp;
@@ -76,24 +77,30 @@ public class Arry {
         }
     }
 
-    public static void getMax() {
+    public static void outMax(int[] randomArray) {
         int max = 0;
-        for (int array : randomArray)
-            if (max < array)
+        for (int array : randomArray) {
+            if (max < array) {
                 max = array;
+            }
+        }
         System.out.println("Max value of mass = " + max);
     }
 
-    public static void getMin() {
+    public static void outMin(int[] randomArray) {
         int min = randomArray[0];
-        for (int array : randomArray)
-            if (min > array)
+        for (int array : randomArray){
+            if (min > array) {
                 min = array;
+            }
+        }
         System.out.println("Min value of mass = " + min);
     }
 
-    public static void setRandomArray() {
-        for (int i = 0; i < randomArray.length; i++)
-            randomArray[i] = new Random().nextInt(101);
+    public static void setRandomArray(int[] randomArray) {
+        int maxNumOfRandom = 101;
+        for (int i = 0; i < randomArray.length; i++) {
+            randomArray[i] = new Random().nextInt(maxNumOfRandom);
+        }
     }
 }

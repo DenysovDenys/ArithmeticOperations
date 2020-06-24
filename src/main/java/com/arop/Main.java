@@ -4,24 +4,28 @@ import arrayOperations.Arry;
 
 public class Main {
     public static void main(String[] args) {
-        Arry.setRandomArray();
-        Arry.getMin();
-        Arry.getMax();
+        int[] randomArray = new int[20];
+        String[][] stringArray = {{"orange ", "apricot ", "coconut "}, {"pineapple ", "banana ", "grapefruit "}, {"mandarin ", "rambutan ", "pear "}};
+        int[] duplicateArray = {3, 2, 3, 1, 4, 2, 8, 3};
+
+        Arry.setRandomArray(randomArray);
+        Arry.outMin(randomArray);
+        Arry.outMax(randomArray);
         System.out.print("Mass increased: ");
-        Arry.setSortBySelectionIncrease();
+        Arry.outSortBySelectionIncrease(randomArray);
         System.out.println();
         System.out.print("Mass decreased: ");
-        Arry.setSortBySelectionDecrease();
+        Arry.outSortBySelectionDecrease(randomArray);
         System.out.println();
-        Arry.setSum();
+        Arry.outSum(randomArray);
         System.out.print("Replaced mass = ");
-        Arry.getReplacedArray();
+        Arry.outReplacedArray(randomArray);
         System.out.println();
         System.out.print("Diagonal of mass = ");
-        Arry.getArrayDiagonal();
+        Arry.outArrayDiagonal(stringArray);
         System.out.println();
         System.out.print("Replaced Duplicate = ");
-        Arry.getReplacedDuplicate();
+        Arry.outReplacedDuplicate(duplicateArray);
     }
 
 }
