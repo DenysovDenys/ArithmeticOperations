@@ -1,31 +1,28 @@
 package com.arop;
 
-import arrayOperations.Arry;
+import classesOperations.Car;
+import classesOperations.Circle;
+import classesOperations.Objects;
+
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int[] randomArray = new int[20];
-        String[][] stringArray = {{"orange ", "apricot ", "coconut "}, {"pineapple ", "banana ", "grapefruit "}, {"mandarin ", "rambutan ", "pear "}};
-        int[] duplicateArray = {3, 2, 3, 1, 4, 2, 8, 3};
+        Circle circle = new Circle();
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Введите радиус: ");
+        System.out.println("Площадь круга равна: " + circle.getArea(sc.nextDouble()));
 
-        Arry.setRandomArray(randomArray);
-        Arry.outMin(randomArray);
-        Arry.outMax(randomArray);
-        System.out.print("Mass increased: ");
-        Arry.outSortBySelectionIncrease(randomArray);
-        System.out.println();
-        System.out.print("Mass decreased: ");
-        Arry.outSortBySelectionDecrease(randomArray);
-        System.out.println();
-        Arry.outSum(randomArray);
-        System.out.print("Replaced mass = ");
-        Arry.outReplacedArray(randomArray);
-        System.out.println();
-        System.out.print("Diagonal of mass = ");
-        Arry.outArrayDiagonal(stringArray);
-        System.out.println();
-        System.out.print("Replaced Duplicate = ");
-        Arry.outReplacedDuplicate(duplicateArray);
+        Objects obj1 = new Objects();
+        Objects obj2 = new Objects();
+        Objects obj3 = new Objects();
+        Objects obj4 = new Objects();
+        System.out.println("Количество созданных объектов класса: " + Objects.count);
+
+        Car car = new Car();
+        car.turnOn();
+        car.ride(50);
+        car.ride(40);
+        car.turnOff();
     }
-
 }
