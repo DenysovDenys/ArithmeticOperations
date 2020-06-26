@@ -1,9 +1,9 @@
-package classesOperations;
+package com.arop.classesOperations;
 
 public class Objects {
     public static int count;
 
-    public Objects(){
+    public Objects() {
         count++;
     }
 }

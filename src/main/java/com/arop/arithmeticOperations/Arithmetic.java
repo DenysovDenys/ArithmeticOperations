@@ -1,4 +1,4 @@
-package arithmeticOperations;
+package com.arop.arithmeticOperations;
 
 public class Arithmetic {
     public void outCalculate(byte b, short sh, long l, double d, float f) {

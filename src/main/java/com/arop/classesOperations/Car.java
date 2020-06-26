@@ -1,24 +1,24 @@
-package classesOperations;
+package com.arop.classesOperations;
 
 public class Car {
     public boolean start;
     public double speed;
 
-    public Car(){
+    public Car() {
         this.start = false;
         this.speed = 0;
     }
 
-    public void turnOn(){
+    public void turnOn() {
         this.start = true;
     }
 
-    public void turnOff(){
+    public void turnOff() {
         this.start = false;
     }
 
-    public void ride(double speed){
-        if (this.start == true){
+    public void ride(double speed) {
+        if (this.start) {
             this.speed = speed;
         }
     }

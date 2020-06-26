@@ -1,8 +1,8 @@
 package com.arop;
 
-import classesOperations.Car;
-import classesOperations.Circle;
-import classesOperations.Objects;
+import com.arop.classesOperations.Car;
+import com.arop.classesOperations.Circle;
+import com.arop.classesOperations.Objects;
 
 import java.util.Scanner;
 
@@ -21,8 +21,10 @@ public class Main {
 
         Car car = new Car();
         car.turnOn();
-        car.ride(50);
-        car.ride(40);
+        int speed = 50;
+        car.ride(speed);
+        speed = 40;
+        car.ride(speed);
         car.turnOff();
     }
 }

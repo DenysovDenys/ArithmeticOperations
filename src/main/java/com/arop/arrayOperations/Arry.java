@@ -1,4 +1,4 @@
-package arrayOperations;
+package com.arop.arrayOperations;
 
 import java.util.Random;
 
@@ -89,7 +89,7 @@ public class Arry {
 
     public static void outMin(int[] randomArray) {
         int min = randomArray[0];
-        for (int array : randomArray){
+        for (int array : randomArray) {
             if (min > array) {
                 min = array;
             }
