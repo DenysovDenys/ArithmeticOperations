@@ -1,30 +1,27 @@
 package com.arop;
 
-import com.arop.classesOperations.Car;
-import com.arop.classesOperations.Circle;
-import com.arop.classesOperations.Objects;
-
-import java.util.Scanner;
+import com.arop.geometry.Shape;
+import com.arop.geometry.plane.Circle;
+import com.arop.geometry.plane.Rectangle;
+import com.arop.geometry.plane.Triangle;
+import com.arop.geometry.space.Cuboid;
+import com.arop.geometry.space.Sphere;
+import com.arop.geometry.space.SquarePyramid;
+import com.arop.geometry.vertex.Vertex2D;
+import com.arop.geometry.vertex.Vertex3D;
 
 public class Main {
     public static void main(String[] args) {
-        Circle circle = new Circle();
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Введите радиус: ");
-        System.out.println("Площадь круга равна: " + circle.getArea(sc.nextDouble()));
+        Triangle triangle = new Triangle(new Vertex2D(1, 1), new Vertex2D(-5, 2), new Vertex2D(0, -4));
+        Rectangle rectangle = new Rectangle(new Vertex2D(0, 10), 5, 5);
+        Circle circle = new Circle(new Vertex2D(0, 0), 10);
+        SquarePyramid squarePyramid = new SquarePyramid(new Vertex3D(5, 5, 5), 5, 5);
+        Cuboid cuboid = new Cuboid(new Vertex3D(7, 7, 7), 4, 10, 3);
+        Sphere sphere = new Sphere(new Vertex3D(8, -5, 0), 9);
+        Shape[] allShapes = {triangle, rectangle, circle, squarePyramid, cuboid, sphere};
 
-        Objects obj1 = new Objects();
-        Objects obj2 = new Objects();
-        Objects obj3 = new Objects();
-        Objects obj4 = new Objects();
-        System.out.println("Количество созданных объектов класса: " + Objects.count);
-
-        Car car = new Car();
-        car.turnOn();
-        int speed = 50;
-        car.ride(speed);
-        speed = 40;
-        car.ride(speed);
-        car.turnOff();
+        for (int i = 0; i < allShapes.length; i++) {
+            System.out.println(allShapes[i]);
+        }
     }
 }
