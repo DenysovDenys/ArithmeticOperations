@@ -6,8 +6,8 @@ import java.util.Collections;
 public class MyList<T extends Comparable<T>> {
     private ArrayList<T> list = new ArrayList<>();
 
-    public void Add(T number){
-        list.add(number);
+    public void Add(T t){
+        list.add(t);
     }
 
     public T GetMax(){
