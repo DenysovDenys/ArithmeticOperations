@@ -1,10 +1,12 @@
 package com.arop.geometry.space;
 
+import com.arop.geometry.interfaces.AreaMeasurable;
+import com.arop.geometry.interfaces.VolumeMeasurable;
 import com.arop.geometry.vertex.Vertex3D;
 
 import java.util.List;
 
-public class Cuboid extends SpaceShape {
+public class Cuboid extends SpaceShape implements AreaMeasurable, VolumeMeasurable {
 
     private final double width;
     private final double height;
@@ -25,5 +27,10 @@ public class Cuboid extends SpaceShape {
     @Override
     public double getVolume() {
         return width * height * depth;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", Area: " + this.getArea() + ", Volume: " + this.getVolume();
     }
 }
