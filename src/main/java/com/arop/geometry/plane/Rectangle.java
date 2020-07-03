@@ -1,10 +1,12 @@
 package com.arop.geometry.plane;
 
+import com.arop.geometry.interfaces.AreaMeasurable;
+import com.arop.geometry.interfaces.PerimeterMeasurable;
 import com.arop.geometry.vertex.Vertex2D;
 
 import java.util.List;
 
-public class Rectangle extends PlaneShape {
+public class Rectangle extends PlaneShape implements PerimeterMeasurable, AreaMeasurable {
 
     private final double width;
     private final double height;
@@ -22,6 +24,11 @@ public class Rectangle extends PlaneShape {
 
     @Override
     public double getPerimeter() {
-        return (width * 2) + (height * 2);
+        return (width + height) * 2;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", Area: " + this.getArea() + ", Perimeter: " + this.getPerimeter();
     }
 }
