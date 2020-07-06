@@ -3,10 +3,19 @@ package com.arop;
 import com.arop.arrayOperations.Fruits;
 import com.arop.arrayOperations.SimilarElements;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         SimilarElements similarElements = new SimilarElements(new int[]{3, 9, 11, 18, 20, 22});
         similarElements.removeDivisibleNumbers();
+
+        List<Integer> secSimilarElements = new ArrayList<>();
+        secSimilarElements.add(3);
+        secSimilarElements.add(11);
+        secSimilarElements.add(18);
+        similarElements.checkSimilarElements(secSimilarElements);
 
         String[] allFruits = {"banana", "Orange", "Apple", "Pear", "Tangerines", "Strawberry"};
         Fruits fruits = new Fruits(allFruits);
