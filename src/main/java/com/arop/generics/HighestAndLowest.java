@@ -11,10 +11,10 @@ public class HighestAndLowest<T extends Comparable<T>> {
     }
 
     public T getMax() {
-        return Arrays.stream(array).max(Comparator.naturalOrder()).get();
+        return Arrays.stream(array).max(Comparator.naturalOrder()).orElse(null);
     }
 
     public T getMin() {
-        return Arrays.stream(array).min(Comparator.naturalOrder()).get();
+        return Arrays.stream(array).min(Comparator.naturalOrder()).orElse(null);
     }
 }

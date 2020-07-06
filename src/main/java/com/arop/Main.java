@@ -5,7 +5,7 @@ import com.arop.generics.MyList;
 
 public class Main {
     public static void main(String[] args) {
-        MyList listOfIntegers = new MyList();
+        MyList<Integer> listOfIntegers = new MyList<>();
         listOfIntegers.add(322);
         listOfIntegers.add(54);
         listOfIntegers.add(245);
@@ -16,7 +16,7 @@ public class Main {
         listOfIntegers.add(15);
         System.out.println("Max of integers: " + listOfIntegers.getMax());
         System.out.println("Min of integers: " + listOfIntegers.getMin());
-        MyList listOfStrings = new MyList();
+        MyList<String> listOfStrings = new MyList<>();
         listOfStrings.add("Hello!");
         listOfStrings.add("How are you?");
         listOfStrings.add("I'm fine, thanks.");
