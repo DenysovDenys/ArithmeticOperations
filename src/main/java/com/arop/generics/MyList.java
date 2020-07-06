@@ -2,19 +2,20 @@ package com.arop.generics;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class MyList<T extends Comparable<T>> {
-    private ArrayList<T> list = new ArrayList<>();
+    private List<T> list = new ArrayList<>();
 
-    public void Add(T t){
+    public void add(T t){
         list.add(t);
     }
 
-    public T GetMax(){
+    public T getMax(){
         return Collections.max(list);
     }
 
-    public T GetMin(){
+    public T getMin(){
         return Collections.min(list);
     }
 }
