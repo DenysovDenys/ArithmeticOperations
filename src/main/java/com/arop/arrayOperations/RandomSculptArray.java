@@ -2,18 +2,16 @@ package com.arop.arrayOperations;
 
 import java.util.Random;
 
-public class Arry {
-    public static void outReplacedDuplicate(int[] duplicateArray) {
+public class RandomSculptArray {
+    private static Random rand = new Random();
+
+    public static void outputReplacedDuplicate(int[] duplicateArray) {
         for (int i = duplicateArray.length - 1; i > 0; i--) {
-            StringBuffer result = new StringBuffer();
-            result.append(duplicateArray[i]);
-            String res = result.toString();
+            String str = String.valueOf(duplicateArray[i]);
             for (int j = 0; j < duplicateArray.length; j++) {
-                StringBuffer esult = new StringBuffer();
-                esult.append(duplicateArray[j]);
-                String re = esult.toString();
+                String finalResult = String.valueOf(duplicateArray[j]);
                 if (i != j) {
-                    if (res.equals(re)) {
+                    if (str.equals(finalResult)) {
                         duplicateArray[i] = 0;
                     }
                 }
@@ -24,20 +22,20 @@ public class Arry {
         }
     }
 
-    public static void outArrayDiagonal(String[][] stringArray) {
+    public static void outputArrayDiagonal(String[][] stringArray) {
         for (int i = 0; i < stringArray.length; i++) {
             System.out.print(stringArray[i][i]);
         }
     }
 
-    public static void outReplacedArray(int[] randomArray) {
+    public static void outputReplacedArray(int[] randomArray) {
         for (int i = 0; i < randomArray.length; i++) {
             randomArray[i] = randomArray[i] * randomArray[i];
             System.out.print(randomArray[i] + " ");
         }
     }
 
-    public static void outSum(int[] randomArray) {
+    public static void outputSum(int[] randomArray) {
         long sum = 0;
         for (int array : randomArray) {
             sum += array;
@@ -45,7 +43,7 @@ public class Arry {
         System.out.println("Summ = " + sum);
     }
 
-    public static void outSortBySelectionIncrease(int[] randomArray) {
+    public static void outputSortBySelectionIncrease(int[] randomArray) {
         int lng = randomArray.length;
         for (int i = 0; i < lng; i++) {
             int minIdx = i;
@@ -61,7 +59,7 @@ public class Arry {
         }
     }
 
-    public static void outSortBySelectionDecrease(int[] randomArray) {
+    public static void outputSortBySelectionDecrease(int[] randomArray) {
         int lng = randomArray.length;
         for (int i = 0; i < lng; i++) {
             int maxIdx = i;
@@ -77,7 +75,7 @@ public class Arry {
         }
     }
 
-    public static void outMax(int[] randomArray) {
+    public static void outputMax(int[] randomArray) {
         int max = 0;
         for (int array : randomArray) {
             if (max < array) {
@@ -87,7 +85,7 @@ public class Arry {
         System.out.println("Max value of mass = " + max);
     }
 
-    public static void outMin(int[] randomArray) {
+    public static void outputMin(int[] randomArray) {
         int min = randomArray[0];
         for (int array : randomArray) {
             if (min > array) {
@@ -97,10 +95,9 @@ public class Arry {
         System.out.println("Min value of mass = " + min);
     }
 
-    public static void setRandomArray(int[] randomArray) {
-        int maxNumOfRandom = 101;
+    public static void setRandomArray(int[] randomArray, int maxNumOfRandom) {
         for (int i = 0; i < randomArray.length; i++) {
-            randomArray[i] = new Random().nextInt(maxNumOfRandom);
+            randomArray[i] = rand.nextInt(maxNumOfRandom);
         }
     }
 }
