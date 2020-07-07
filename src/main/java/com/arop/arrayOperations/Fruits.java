@@ -1,22 +1,21 @@
 package com.arop.arrayOperations;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Fruits {
-    private List<String> listOfFruits = new ArrayList<>();
+    private final List<String> listOfFruits = new ArrayList<>();
 
     public Fruits(String[] listOfFruits) {
-        for (int i = 0; i < listOfFruits.length; i++) {
-            this.listOfFruits.add(listOfFruits[i]);
-        }
+        this.listOfFruits.addAll(Arrays.asList(listOfFruits));
     }
 
-    public void replaceFruit() {
-        int i = this.listOfFruits.indexOf("Orange");
+    public void replaceFruit(String fruitNeedReplaced, String replacedFruit) {
+        int i = this.listOfFruits.indexOf(fruitNeedReplaced);
         if (i >= 0) {
-            this.listOfFruits.set(i, "Grapefruit");
-            System.out.println("Replaced the value of list «Orange» to «Grapefruit»: " + this.listOfFruits);
+            this.listOfFruits.set(i, replacedFruit);
+            System.out.println("Replaced the value of list «" + fruitNeedReplaced + "» to «" + replacedFruit + "»: " + this.listOfFruits);
         } else
             System.out.println("Value not present");
     }

@@ -10,7 +10,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         SimilarElements similarElements = new SimilarElements(new int[]{3, 9, 11, 18, 20, 22});
-        similarElements.removeDivisibleNumbers();
+        similarElements.removeDivisibleNumbers(3);
 
         List<Integer> secSimilarElements = new ArrayList<>();
         secSimilarElements.add(3);
@@ -18,13 +18,13 @@ public class Main {
         secSimilarElements.add(18);
         similarElements.checkSimilarElements(secSimilarElements);
 
-        String[] allFruits = {"banana", "Orange", "Apple", "Pear", "Tangerines", "Strawberry"};
+        String[] allFruits = {"Banana", "Orange", "Apple", "Pear", "Tangerines", "Strawberry"};
         Fruits fruits = new Fruits(allFruits);
-        fruits.replaceFruit();
+        fruits.replaceFruit("Orange", "Grapefruit");
 
-        String[] allFruitsForError = {"banana", "Grapefruit", "Apple", "Pear", "Tangerines", "Strawberry"};
+        String[] allFruitsForError = {"Banana", "Grapefruit", "Apple", "Pear", "Tangerines", "Strawberry"};
         Fruits fruitsForError = new Fruits(allFruitsForError);
-        fruitsForError.replaceFruit();
+        fruitsForError.replaceFruit("Potato", "Tomato");
 
         int[] numbersForTreeSet = {3, 22, 43, 18, 8, 11};
         SortTreeSet treeSet = new SortTreeSet(numbersForTreeSet);
