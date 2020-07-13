@@ -1,13 +1,10 @@
-package com.arop;
-
-import com.arop.streamOperations.StreamFunctions;
-import com.arop.streamOperations.User;
+package com.arop.streamOperations;
 
 import java.util.Arrays;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args){
         List<User> users = Arrays.asList(
                 new User("Basil", 16, "Dnipro"),
                 new User("Peter", 23, "Dnipro"),

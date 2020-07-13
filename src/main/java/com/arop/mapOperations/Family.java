@@ -1,7 +1,7 @@
 package com.arop.mapOperations;
 
 public class Family implements Comparable<Family> {
-    private String name;
+    private final String name;
     private int quantityMember;
     private String title;
     private String nameOfEmblem;
@@ -15,15 +15,19 @@ public class Family implements Comparable<Family> {
     }
 
     public String getTitle() {
-        return title;
+        return this.title;
+    }
+
+    public String getName() {
+        return this.name;
     }
 
     public String getNameOfEmblem() {
-        return nameOfEmblem;
+        return this.nameOfEmblem;
     }
 
     @Override
     public int compareTo(Family family) {
-        return this.name.compareTo(family.title);
+        return this.getName().compareTo(family.getName());
     }
 }
