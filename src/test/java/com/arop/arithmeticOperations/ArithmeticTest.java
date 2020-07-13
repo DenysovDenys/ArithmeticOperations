@@ -1,6 +1,5 @@
-package arithmeticOperations;
+package com.arop.arithmeticOperations;
 
-import com.arop.arithmeticOperations.Arithmetic;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
