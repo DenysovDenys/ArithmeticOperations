@@ -1,9 +1,9 @@
 package com.arop.streamOperations;
 
 public class User {
-    private String name;
-    private int age;
-    private String city;
+    private final String name;
+    private final int age;
+    private final String city;
 
     public User(String name, int age, String city) {
         this.name = name;

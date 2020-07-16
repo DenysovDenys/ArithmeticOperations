@@ -25,14 +25,14 @@ public class StreamFunctions {
         System.out.println("Average age of users, who are from " + city + ": ");
         System.out.println((users.stream()
                 .filter(user -> user.getCity().equals(city))
-                .mapToInt(User::getAge).sum()) / (int) users.stream()
+                .mapToDouble(User::getAge).sum()) / (double) users.stream()
                 .filter(user -> user.getCity().equals(city)).count());
     }
 
     public static void outputNumberUsersNotFromCity(List<User> users, String city) {
         System.out.println("How many users are not from " + city + ": ");
         System.out.println(users.stream()
-                .filter(user -> !user.getCity().equals("Kiev"))
+                .filter(user -> !user.getCity().equals(city))
                 .count());
     }
 
