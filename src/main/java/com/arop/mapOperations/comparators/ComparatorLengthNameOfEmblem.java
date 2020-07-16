@@ -1,4 +1,6 @@
-package com.arop.mapOperations;
+package com.arop.mapOperations.comparators;
+
+import com.arop.mapOperations.family.Family;
 
 import java.util.Comparator;
 

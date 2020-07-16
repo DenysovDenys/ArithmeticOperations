@@ -1,4 +1,7 @@
-package com.arop.streamOperations;
+package com.arop.streamOperations.executor;
+
+import com.arop.streamOperations.stream.StreamFunctions;
+import com.arop.streamOperations.user.User;
 
 import java.util.Arrays;
 import java.util.List;

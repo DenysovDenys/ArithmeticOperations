@@ -1,4 +1,4 @@
-package com.arop.mapOperations;
+package com.arop.mapOperations.family;
 
 public class Family implements Comparable<Family> {
     private final String name;

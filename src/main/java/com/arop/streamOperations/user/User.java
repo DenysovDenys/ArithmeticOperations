@@ -1,4 +1,4 @@
-package com.arop.streamOperations;
+package com.arop.streamOperations.user;
 
 public class User {
     private final String name;

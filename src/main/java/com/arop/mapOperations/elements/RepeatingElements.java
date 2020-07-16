@@ -1,4 +1,4 @@
-package com.arop.mapOperations;
+package com.arop.mapOperations.elements;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;

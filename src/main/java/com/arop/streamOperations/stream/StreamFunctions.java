@@ -1,4 +1,6 @@
-package com.arop.streamOperations;
+package com.arop.streamOperations.stream;
+
+import com.arop.streamOperations.user.User;
 
 import java.util.Comparator;
 import java.util.List;

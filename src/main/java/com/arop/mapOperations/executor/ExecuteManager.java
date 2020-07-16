@@ -1,4 +1,9 @@
-package com.arop.mapOperations;
+package com.arop.mapOperations.executor;
+
+import com.arop.mapOperations.family.Family;
+import com.arop.mapOperations.elements.RepeatingElements;
+import com.arop.mapOperations.comparators.ComparatorLengthNameOfEmblem;
+import com.arop.mapOperations.comparators.ComparatorLengthTitle;
 
 import java.util.HashMap;
 import java.util.Map;
