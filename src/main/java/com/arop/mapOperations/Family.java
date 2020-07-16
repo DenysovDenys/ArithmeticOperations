@@ -2,9 +2,9 @@ package com.arop.mapOperations;
 
 public class Family implements Comparable<Family> {
     private final String name;
-    private int quantityMember;
-    private String title;
-    private String nameOfEmblem;
+    private final int quantityMember;
+    private final String title;
+    private final String nameOfEmblem;
 
 
     public Family(String name, int quantityMember, String title, String nameOfEmblem) {
@@ -29,5 +29,20 @@ public class Family implements Comparable<Family> {
     @Override
     public int compareTo(Family family) {
         return this.getName().compareTo(family.getName());
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (obj == null || obj.getClass() != this.getClass()) {
+            return false;
+        }
+        Family guest = (Family) obj;
+        return name.equals(guest.name)
+                && (quantityMember == guest.quantityMember)
+                && (title.equals(guest.title))
+                && (nameOfEmblem.equals(guest.nameOfEmblem));
     }
 }
