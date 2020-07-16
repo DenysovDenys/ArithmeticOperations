@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class ExecuterManager {
+public class ExecuteManager {
     Family borodachenko = new Family("Borodachenko", 3, "Dukes", "Honor");
     Family derkach = new Family("Derkach", 2, "Barons", "Glaive");
     Family uspenko = new Family("Uspenko", 10, "Counts", "Horde");
