@@ -1,6 +1,7 @@
 package com.arop.patternOperations.executor;
 
-import com.arop.patternOperations.Cake.Cake;
+import com.arop.patternOperations.builder.cake.Cake;
+import com.arop.patternOperations.singleton.cake.Tree;
 
 public class ExecuteManager {
     Cake kievCake;
@@ -23,5 +24,10 @@ public class ExecuteManager {
                 .setFruits("pineapple")
                 .build();
         System.out.println(panchoCake.toString());
+
+        Tree.getInstance("Oak");
+        System.out.println(Tree.name);
+        Tree.getInstance("Maple");
+        System.out.println(Tree.name);
     }
 }
