@@ -8,13 +8,24 @@ public class Tree {
         Tree.name = name;
     }
 
-    public static String getName(){
+    public String getName() {
         return Tree.name;
     }
 
-    public static void getInstance(String name) {
+    public static Tree getInstance(String name) {
         if (instance == null) {
             instance = new Tree(name);
         }
+        return instance;
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
     }
 }

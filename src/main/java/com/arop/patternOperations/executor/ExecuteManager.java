@@ -3,6 +3,8 @@ package com.arop.patternOperations.executor;
 import com.arop.patternOperations.builder.cake.Cake;
 import com.arop.patternOperations.singleton.cake.Tree;
 
+import java.util.Objects;
+
 public class ExecuteManager {
     Cake kievCake;
     Cake panchoCake;
@@ -25,9 +27,11 @@ public class ExecuteManager {
                 .build();
         System.out.println(panchoCake.toString());
 
-        Tree.getInstance("Oak");
-        System.out.println(Tree.getName());
-        Tree.getInstance("Maple");
-        System.out.println(Tree.getName());
+        Tree oak = Tree.getInstance("Oak");
+        System.out.println(oak.getName());
+        Tree maple = Tree.getInstance("Maple");
+        System.out.println(maple.getName());
+        System.out.println(oak.equals(maple));
+        System.out.println(Objects.equals(oak.hashCode(), maple.hashCode()));
     }
 }
