@@ -26,8 +26,8 @@ public class ExecuteManager {
         System.out.println(panchoCake.toString());
 
         Tree.getInstance("Oak");
-        System.out.println(Tree.name);
+        System.out.println(Tree.getName());
         Tree.getInstance("Maple");
-        System.out.println(Tree.name);
+        System.out.println(Tree.getName());
     }
 }
