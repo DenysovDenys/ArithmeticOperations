@@ -6,7 +6,7 @@ import com.user.User;
 
 public class ExecuteConsole extends Console {
 
-    Dao dao = DaoImpl.getDao();
+    private static final Dao dao = DaoImpl.getDao();
 
     @Override
     public void show() {
@@ -22,15 +22,9 @@ public class ExecuteConsole extends Console {
     @Override
     public void choice() {
         switch (select()) {
-            case 1:
-                addUserDialog();
-                break;
-            case 2:
-                editUserDialog();
-                break;
-            case 3:
-                removeUserDialog();
-                break;
+            case 1 -> addUserDialog();
+            case 2 -> editUserDialog();
+            case 3 -> removeUserDialog();
         }
     }
 
